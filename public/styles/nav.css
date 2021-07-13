@@ -7,9 +7,7 @@
   height: 120px;
 	position: fixed;
 	width: 100%;
-
-
-
+  z-index: 10;
  }
 
  .nav-tweeter {
