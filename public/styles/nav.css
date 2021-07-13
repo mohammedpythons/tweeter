@@ -5,6 +5,11 @@
   background-color: #4056A1;
   color: #FFFF;
   height: 120px;
+	position: fixed;
+	width: 100%;
+
+
+
  }
 
  .nav-tweeter {
@@ -27,18 +32,19 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   height: 400px;
+   height: 500px;
    width: 100%;
    background-color: #00a6d9;
    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
  }
  .img {
    position: relative;
-   bottom: 40px;
+   top: 28px;
+
  }
  .name {
   position: relative;
-  bottom: 40px;
+  top: 20px;
   color: white;
  }
 
