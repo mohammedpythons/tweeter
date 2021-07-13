@@ -1,0 +1,44 @@
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4056A1;
+  color: #FFFF;
+  height: 120px;
+ }
+
+ .nav-tweeter {
+   font-family: 'Bungee', 'Source Sans Pro', cursive, 'sans-serif';
+   margin-left: 1.5em;
+ }
+ .new-tweet-nav {
+   margin-right: 1.5em;
+   display: flex;
+   flex-direction: column;
+   
+   align-items: center;
+ }
+ i {
+   color: red;
+ }
+
+ .header-img-name {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 400px;
+   width: 100%;
+   background-color: #00a6d9;
+   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+ }
+ .img {
+   position: relative;
+   bottom: 40px;
+ }
+ .name {
+  position: relative;
+  bottom: 40px;
+  color: white;
+ }
+
