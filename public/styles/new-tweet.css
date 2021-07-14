@@ -1,3 +1,10 @@
+.error {
+  width: 100%;
+  color: red;
+  padding: 5px;
+  border: red solid 3px;
+  display: none;
+}
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -42,14 +49,11 @@ article {
   justify-content: space-between;
 }
 .header-tweeted h3 {
-margin: 0;
+  margin: 0;
 }
 .par-tweeted {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
-  word-wrap: break-word;
-  border: solid red 4px;
 }
 .footer-tweeted {
   display: flex;
@@ -63,3 +67,4 @@ margin: 0;
 .icon-footer:hover {
   color: red;
 }
+

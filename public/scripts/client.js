@@ -4,6 +4,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(() => {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 	const createTweetElement = (obj) => {
 
     
@@ -13,7 +18,7 @@ $(document).ready(() => {
           <h3>${obj.user.handle}</h3>
         </header>
         <p class="par-tweeted">
-          ${obj.content.text}
+          ${escape(obj.content.text)}
         </p>
         <footer class="footer-tweeted">
           <div>${timeago.format(obj.created_at)}</div>
@@ -67,10 +72,22 @@ $('form').on("submit", (e) => {
     created_at: Date.now()
 
   }
- 
+  // const $display = $(".error")
+  if ($text.length > 140) {
+   
+
+    $(".error").text("Oops! your tweet must be 140 characters maximum");
+    $(".error").slideDown()
+  }else if (!$text){
+    $(".error").text("Oops, you have to write something!!")
+    $(".error").slideDown()
+
+  } else {
     const $tweet = createTweetElement(submit);
         const $element = $(".sec");
         $element.prepend($tweet);
+        $(".error").slideUp()
+  }
   
 })
 
