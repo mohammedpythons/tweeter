@@ -9,7 +9,7 @@ $(document).ready(() => {
     
         let html = `<article>
         <header class="header-tweeted">
-          <div><img src="${obj.user.avatars}">-${obj.user.name}</div>
+          <div><img src="${obj.user.avatars}"> ${obj.user.name}</div>
           <h3>${obj.user.handle}</h3>
         </header>
         <p class="par-tweeted">
@@ -28,7 +28,7 @@ $(document).ready(() => {
 
     return html
 }
-const loadTweet = () =>{
+const loadTweet = () => {
   $.ajax({
     url: "/tweets",
     action: "GET"
@@ -37,13 +37,42 @@ const loadTweet = () =>{
   
     for (const user of res) {
       const $tweet = createTweetElement(user);
-      const $element = $("main");
-      $element.append($tweet);
+      const $element = $(".sec");
+      $element.prepend($tweet);
     }
   })
+
 }
 loadTweet();
 
+
+$('form').on("submit", (e) => {
+  e.preventDefault();
+  const $text = $(".tweet-text").val();
+  $.ajax({
+    url: "/tweet",
+    method: "POST",
+    data: {"text": $text}
+  })
+  const submit = {
+    user: {
+      name: "Moe",
+      avatars: "https://i.imgur.com/73hZDYK.png",
+      handle: "@Moe"
+    },
+    content: {
+      text: $text
+    },
+
+    created_at: Date.now()
+
+  }
+ 
+    const $tweet = createTweetElement(submit);
+        const $element = $(".sec");
+        $element.prepend($tweet);
+  
+})
 
 });
 
