@@ -24,14 +24,7 @@
   border: none;
   outline: none;
   border-bottom: black 5px solid;
-  background-color: #f4f1ec;
-  
-}
-#tweet-text:focus {
-  border: none;
-  border-bottom: black 5px solid;
-  outline: none;
-  
+  background-color: #f4f1ec; 
 }
 article {
   border: solid black 3px;
