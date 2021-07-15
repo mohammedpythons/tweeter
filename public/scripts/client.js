@@ -14,7 +14,7 @@ $(document).ready(() => {
 	const createTweetElement = (obj) => {
 
     
-        let html = `<article>
+        let $html = `<article>
         <header class="header-tweeted">
           <div><img src="${obj.user.avatars}"> ${obj.user.name}</div>
           <h3>${obj.user.handle}</h3>
@@ -33,7 +33,7 @@ $(document).ready(() => {
         </footer>
       </article>`
 
-    return html;
+    return $html;
 }
 const renderTweet = (tweet) => {
   for (const item of tweet) {
@@ -51,10 +51,7 @@ const loadTweet = () => {
 
     renderTweet(res);
   })
-
 }
-
-
 $('form').on("submit", (e) => {
   e.preventDefault();
   const data = $("form").serialize()
