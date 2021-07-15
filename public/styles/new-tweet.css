@@ -1,8 +1,8 @@
 .error {
   width: 100%;
-  color: red;
+  color: white;
   padding: 5px;
-  border: red solid 3px;
+  background-color: red;
   display: none;
 }
 .new-tweet {
@@ -42,6 +42,9 @@ article {
   padding: 10px;
   margin: 30px 0 10px 0;
 }
+article:hover{
+  box-shadow: black 0.25em 0.25em; 
+}
 .header-tweeted {
   display: flex;
   flex-direction: row;
@@ -60,11 +63,11 @@ article {
   justify-content: space-between;
 }
 .icon-footer {
-  color: black;
+  color: #4056A1;
   cursor: pointer;
 }
 .icon-footer:hover {
-  color: red;
+  color: #ca392b;
 }
 
 @media only screen and (min-width: 1024px) {

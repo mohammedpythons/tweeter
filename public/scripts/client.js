@@ -33,7 +33,14 @@ $(document).ready(() => {
         </footer>
       </article>`
 
-    return html
+    return html;
+}
+const renderTweet = (tweet) => {
+  for (const item of tweet) {
+    const $tweet = createTweetElement(item);
+      const $element = $(".sec");
+      $element.prepend($tweet);
+  }
 }
 const loadTweet = () => {
   $.ajax({
@@ -41,53 +48,37 @@ const loadTweet = () => {
     action: "GET"
   })
   .then((res) => {
-  
-    for (const user of res) {
-      const $tweet = createTweetElement(user);
-      const $element = $(".sec");
-      $element.prepend($tweet);
-    }
+
+    renderTweet(res);
   })
 
 }
-loadTweet();
 
 
 $('form').on("submit", (e) => {
   e.preventDefault();
-  const $text = $(".tweet-text").val();
-  $.ajax({
-    url: "/tweet",
-    method: "POST",
-    data: {"text": $text}
-  })
-  const submit = {
-    user: {
-      name: "Moe",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@Moe99"
-    },
-    content: {
-      text: $text
-    },
-
-    created_at: Date.now()
-
-  }
+  const data = $("form").serialize()
+ const $text = $("#tweet-text").val();
   if ($text.length > 140) {
     $(".error").text("Oops! your tweet must be 140 characters maximum");
-    $(".error").slideDown()
+    $(".error").slideDown("slow").delay(1500).slideUp("slow");
   }else if (!$text){
     $(".error").text("Oops, you have to write something!!")
-    $(".error").slideDown()
+    $(".error").slideDown("slow").delay(1500).slideUp("slow");
   } else {
-    const $tweet = createTweetElement(submit);
-        const $element = $(".sec");
-        $element.prepend($tweet);
-        $(".error").slideUp();
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data
+    })
+   .then(() => {
+    loadTweet()
+   })
+
+    $("#form-id").trigger("reset");
   }
-  
 })
+loadTweet();
 
 });
 
