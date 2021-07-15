@@ -3,12 +3,14 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+// preventing crose site scripting (XSS)
 $(document).ready(() => {
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+  //creating element on the fly
 	const createTweetElement = (obj) => {
 
     
@@ -63,7 +65,7 @@ $('form').on("submit", (e) => {
     user: {
       name: "Moe",
       avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@Moe"
+      handle: "@Moe99"
     },
     content: {
       text: $text
@@ -72,21 +74,17 @@ $('form').on("submit", (e) => {
     created_at: Date.now()
 
   }
-  // const $display = $(".error")
   if ($text.length > 140) {
-   
-
     $(".error").text("Oops! your tweet must be 140 characters maximum");
     $(".error").slideDown()
   }else if (!$text){
     $(".error").text("Oops, you have to write something!!")
     $(".error").slideDown()
-
   } else {
     const $tweet = createTweetElement(submit);
         const $element = $(".sec");
         $element.prepend($tweet);
-        $(".error").slideUp()
+        $(".error").slideUp();
   }
   
 })

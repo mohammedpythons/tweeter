@@ -19,7 +19,6 @@
   color: white;
   background-color: #4056A1;
   cursor: pointer;
-    
 }
 .div-humming {
   display: flex;
@@ -68,3 +67,23 @@ article {
   color: red;
 }
 
+@media only screen and (min-width: 1024px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .media-query-row{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+  }
+  .header-img-name{
+    width: 500px;
+    height: 400px;
+    margin: 30px 50px 0 0 ;
+  }
+  
+}
+  

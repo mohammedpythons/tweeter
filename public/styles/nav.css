@@ -5,11 +5,11 @@
   background-color: #4056A1;
   color: #FFFF;
   height: 120px;
-	position: fixed;
+	position: sticky;
+  top: 0;
 	width: 100%;
   z-index: 10;
  }
-
  .nav-tweeter {
    font-family: 'Bungee', 'Source Sans Pro', cursive, 'sans-serif';
    margin-left: 1.5em;
@@ -21,28 +21,42 @@
    
    align-items: center;
  }
- i {
-   color: red;
- }
-
- .header-img-name {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   height: 500px;
-   width: 100%;
-   background-color: #00a6d9;
-   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
- }
- .img {
-   position: relative;
-   top: 28px;
-
- }
- .name {
-  position: relative;
-  top: 20px;
+ .anchor{
+  text-decoration: none;
   color: white;
- }
+}
+.anchor span{
+  font-size: medium;
+}
+i{
+  color: red;
+}
+
+.header-img-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  background-color: #00a6d9;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+}
+.img {
+  position: relative;
+  top: 28px;
+}
+.name {
+ position: relative;
+ top: 20px;
+ color: white;
+}
+
+
+ @media only screen and (max-width: 1024px) {
+  .nav-main{
+    background-color: #00a6d9;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  }
+}
 

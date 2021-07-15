@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
     <link rel="stylesheet" href="styles/nav.css" type="text/css">
     <link rel="stylesheet" href="styles/new-tweet.css">
 
@@ -25,15 +25,17 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar (fixed) and the first element in the body -->
     <nav class="nav-main">
       <span class="nav-tweeter">tweeter</span>
 
       <div class="new-tweet-nav">
-      <span><strong>write</strong> a new tweet</span>
+      <a class="anchor" href="#tweet-text">write <span>a new tweet</span></a>
       <i class="fas fa-angle-double-down"></i>
     </div>
    </nav>
+     <!-- the second element of the body -->
+   <section class="media-query-row">
 
    <header class="header-img-name">
     <div class="img">
@@ -67,9 +69,8 @@
       </form>
     </section>
     <section class="sec">
-
     </section> 
-    
     </main>
+  </section>
   </body>
 </html>
