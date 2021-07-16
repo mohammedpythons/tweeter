@@ -21,6 +21,11 @@ Tweeter is a simple, single-page Twitter clone. This was bulit as a part of the 
 ![Screen Shot 2021-07-15 at 8 27 46 PM](https://user-images.githubusercontent.com/69409540/125874610-39b2c98b-2eae-45e6-8a35-81e855fb0be7.png)
 
 
+##Technologies and Tools
+-HTML
+-CSS
+-Javascript
+-Jquery
 
 
 
