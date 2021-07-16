@@ -60,7 +60,7 @@ $('form').on("submit", (e) => {
     $(".error").text("Oops! your tweet must be 140 characters maximum");
     $(".error").slideDown("slow").delay(1500).slideUp("slow");
   }else if (!$text){
-    $(".error").text("Oops, you have to write something!!")
+    $(".error").text("Oops!, you have to write something!!")
     $(".error").slideDown("slow").delay(1500).slideUp("slow");
   } else {
     $.ajax({
