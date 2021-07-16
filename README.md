@@ -22,10 +22,11 @@ Tweeter is a simple, single-page Twitter clone. This was bulit as a part of the 
 
 
 ##Technologies and Tools
+
 -HTML
--CSS
--Javascript
--Jquery
+- CSS
+- Javascript
+- Jquery
 
 
 
