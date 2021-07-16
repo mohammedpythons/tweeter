@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone. This was bulit as a part of the 
 
 ## Final Product
 
-###Desktop screen:
+Desktop screen:
 <img width="1433" alt="Screen Shot 2021-07-15 at 8 02 53 PM" src="https://user-images.githubusercontent.com/69409540/125874482-8bafacd3-44b8-47b9-bdf7-9348860ff09d.png">
 <img width="1440" alt="Screen Shot 2021-07-15 at 8 05 47 PM" src="https://user-images.githubusercontent.com/69409540/125874502-090a8f0d-601e-4afd-9e32-5cb2464537be.png">
 
@@ -13,7 +13,7 @@ Tweeter is a simple, single-page Twitter clone. This was bulit as a part of the 
 
 
 
-###Mobile screen:
+Mobile screen:
 
 <img width="526" alt="Screen Shot 2021-07-15 at 8 06 35 PM" src="https://user-images.githubusercontent.com/69409540/125874784-44180a82-9bf6-43d7-85d7-12e6f15724fb.png">
 
